@@ -7,29 +7,29 @@ import javax.persistence.*;
 @DiscriminatorColumn(name="hasKeys", discriminatorType = DiscriminatorType.STRING)
 @DiscriminatorValue("no")
 public class Cleaner extends Person implements CleanerInterface {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.TABLE)
-//    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private int id;
     private int cleanerBadgeNr;
 
     public Cleaner() {
     }
 
-//    public Cleaner(String name, String surname, String PESEL, int cleanerBadgeNumber) {
-//        super(name, surname, PESEL);
-//        this.cleanerBadgeNumber = cleanerBadgeNumber;
-//    }
-//
-//
-//    public Cleaner(CleanerWithKeys cleanerWithKeys) {
-//        super(cleanerWithKeys.getName(), cleanerWithKeys.getSurname(), cleanerWithKeys.getPESEL());
-//        this.cleanerBadgeNumber = cleanerWithKeys.getCleanerBadgeNumber();
-//    }
+    public Cleaner(String name, String surname, String PESEL, int cleanerBadgeNr) {
+        super(name, surname, PESEL);
+        this.cleanerBadgeNr = cleanerBadgeNr;
+    }
 
 
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
+    public Cleaner(CleanerWithKeys cleanerWithKeys) {
+        super(cleanerWithKeys.getName(), cleanerWithKeys.getSurname(), cleanerWithKeys.getPESEL());
+        this.cleanerBadgeNr = cleanerWithKeys.getCleanerBadgeNr();
+    }
+
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getCleanerBadgeNr() {
         return cleanerBadgeNr;
@@ -38,4 +38,6 @@ public class Cleaner extends Person implements CleanerInterface {
     public void setCleanerBadgeNr(int cleanerBadgeNr) {
         this.cleanerBadgeNr = cleanerBadgeNr;
     }
+
+
 }

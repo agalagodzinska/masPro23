@@ -40,6 +40,14 @@ public class Facility {
     public Facility() {
     }
 
+    public Facility(String name, Address address, String NIP, Owner owner) {
+        this.name = name;
+        this.address = address;
+        this.NIP = NIP;
+        this.owner = owner;
+    }
+
+
     public int getId() {
         return id;
     }

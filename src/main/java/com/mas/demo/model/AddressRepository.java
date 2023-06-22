@@ -13,5 +13,4 @@ public interface AddressRepository {
     Address save(Address entity);
     Page<Address> findAll(Pageable page);
     boolean existsById(Integer id);
-    //List<Address> findBy costam
 }

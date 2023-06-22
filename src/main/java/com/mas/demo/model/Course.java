@@ -3,7 +3,9 @@ package com.mas.demo.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -34,6 +36,15 @@ public class Course {
 
 
     public Course() {
+    }
+
+    public Course( double price, int totalSpots, int spotsAvailable,int totalHourCount, LocalDateTime dateTime, Trainer trainer) {
+       this.price = price;
+        this.totalSpots = totalSpots;
+        this.spotsAvailable = spotsAvailable;
+        this.totalHourCount=totalHourCount;
+        this.dateTime=dateTime;
+        this.trainer = trainer;
     }
 
     public int getId() {

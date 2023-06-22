@@ -25,23 +25,23 @@ public class Address {
     public Address() {
     }
 
-//    public Address(String postalCode, String country, String city, String streetName, int houseNumber, int flatNumber) {
-//        this.postalCode = postalCode;
-//        this.country = country;
-//        this.city = city;
-//        this.streetName = streetName;
-//        this.houseNumber = houseNumber;
-//        this.flatNumber = flatNumber;
-//    }
-//    //przeciazenie metody
-//    public Address(String postalCode, String country, String city, String streetName, int houseNumber) {
-//        this.postalCode = postalCode;
-//        this.country = country;
-//        this.city = city;
-//        this.streetName = streetName;
-//        this.houseNumber = houseNumber;
-//        this.flatNumber = null;
-//    }
+    public Address(String postalCode, String country, String city, String streetName, int houseNumber, int flatNumber) {
+        this.postalCode = postalCode;
+        this.country = country;
+        this.city = city;
+        this.streetName = streetName;
+        this.houseNumber = houseNumber;
+        this.flatNumber = flatNumber;
+    }
+    //przeciazenie metody
+    public Address(String postalCode, String country, String city, String streetName, int houseNumber) {
+        this.postalCode = postalCode;
+        this.country = country;
+        this.city = city;
+        this.streetName = streetName;
+        this.houseNumber = houseNumber;
+        this.flatNumber = null;
+    }
 
     public void setId(int id) {
         this.id = id;

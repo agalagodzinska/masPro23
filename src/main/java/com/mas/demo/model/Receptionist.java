@@ -17,10 +17,10 @@ public class Receptionist extends Person{
     public Receptionist() {
     }
 
-//    public Receptionist(String name, String surname, String PESEL,int receptionistBadgeNr) {
-//        super(name, surname, PESEL);
-//        this.receptionistBadgeNr = receptionistBadgeNr;
-//    }
+    public Receptionist(String name, String surname, String PESEL,int receptionistBadgeNr) {
+        super(name, surname, PESEL);
+        this.receptionistBadgeNr = receptionistBadgeNr;
+    }
 
     @Override
     public int getId() {

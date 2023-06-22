@@ -14,7 +14,6 @@ public class Workshops {
     @ManyToOne
     @JoinColumn(name="facility_id", nullable=true)
     private Facility facility;
-    //private Level level;
     private double price;
     private int totalSpots;
     private int spotsAvailable;
