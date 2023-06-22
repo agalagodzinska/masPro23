@@ -2,22 +2,23 @@ package com.mas.demo.model;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "address")
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @NotBlank
+    private Long id;
+    @NotNull
     private String postalCode;
-    @NotBlank
+    @NotNull
     private String country;
-    @NotBlank
+    @NotNull
     private String city;
-    @NotBlank
+    @NotNull
     private String streetName;
-    @NotBlank
+    @NotNull
     private int houseNumber;
     private Integer flatNumber;
     @OneToOne(mappedBy = "address")
@@ -44,11 +45,11 @@ public class Address {
         this.flatNumber = null;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 

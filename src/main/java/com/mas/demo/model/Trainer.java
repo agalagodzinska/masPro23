@@ -10,9 +10,9 @@ import java.util.Set;
 @DiscriminatorColumn(name="isOwner", discriminatorType = DiscriminatorType.STRING)
 @DiscriminatorValue("no")
 public class Trainer extends Person {
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
-    private int id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.TABLE)
+//    private Long id;
     @NotBlank
     private int salary;
 
@@ -25,15 +25,15 @@ public class Trainer extends Person {
     public Trainer() {
     }
 
-    @Override
-    public int getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(int id) {
-        this.id = id;
-    }
+//    @Override
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    @Override
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
     public int getSalary() {
         return salary;

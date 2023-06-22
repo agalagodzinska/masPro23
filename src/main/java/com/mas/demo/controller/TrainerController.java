@@ -25,9 +25,9 @@ public class TrainerController {
 
     @GetMapping("/trainers")
     public String showTrainers(Model model) {
-        List<Trainer> trainers = repository.findAll(); // Retrieve all trainers from the repository
-        model.addAttribute("trainers", trainers); // Add the trainers list to the model
-        return "trainers"; // Return the name of the Thymeleaf template (trainers.html)
+        List<Trainer> trainers = repository.findAll();
+        model.addAttribute("trainers", trainers);
+        return "trainers";
     }
 //    @GetMapping("/trainers/{trainerId}/courses")
 //    public List<Course> getCoursesForTrainer(@PathVariable int trainerId) {
@@ -56,7 +56,7 @@ public class TrainerController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity updateTrainer(@PathVariable Integer id, @RequestBody Trainer trainer) {
+    public ResponseEntity updateTrainer(@PathVariable Long id, @RequestBody Trainer trainer) {
         Trainer currentTrainer = repository.findById(id).orElseThrow(RuntimeException::new);
         currentTrainer.setName(trainer.getName());
         currentTrainer.setSurname(trainer.getSurname());
@@ -67,7 +67,7 @@ public class TrainerController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteTrainer(@PathVariable Integer id) {
+    public ResponseEntity deleteTrainer(@PathVariable Long id) {
         repository.deleteById(id);
         return ResponseEntity.ok().build();
     }

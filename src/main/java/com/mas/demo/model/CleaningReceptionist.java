@@ -5,9 +5,9 @@ import javax.persistence.*;
 @Entity
 @DiscriminatorValue("yes")
 public class CleaningReceptionist extends Receptionist implements CleanerInterface {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
 
     int cleanerBadgeNr;
     int receptionistBadgeNr;
@@ -21,13 +21,13 @@ public class CleaningReceptionist extends Receptionist implements CleanerInterfa
     }
 
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
     public int getCleanerBadgeNr() {
         return cleanerBadgeNr;

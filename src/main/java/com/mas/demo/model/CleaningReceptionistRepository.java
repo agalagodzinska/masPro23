@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
-public interface CleaningReceptionistRepository extends JpaRepository<CleaningReceptionist, Integer> {
+public interface CleaningReceptionistRepository extends JpaRepository<CleaningReceptionist, Long> {
 }

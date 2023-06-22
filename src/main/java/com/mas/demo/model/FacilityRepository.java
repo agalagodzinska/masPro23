@@ -5,5 +5,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
 
-public interface FacilityRepository extends JpaRepository<Facility, Integer> {
+public interface FacilityRepository extends JpaRepository<Facility, Long> {
 }

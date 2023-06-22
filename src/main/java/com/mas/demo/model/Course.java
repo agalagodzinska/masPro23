@@ -14,7 +14,9 @@ import java.util.Set;
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
-    private int id;
+    private Long id;
+    @NotNull
+    private String name;
     @NotNull
     private double price;
     @NotNull
@@ -49,12 +51,20 @@ public class Course {
 //        this.trainer = trainer;
 //    }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getPrice() {

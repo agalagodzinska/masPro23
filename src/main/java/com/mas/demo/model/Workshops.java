@@ -9,7 +9,7 @@ import java.util.EnumSet;
 public class Workshops {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
-    private int id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name="facility_id", nullable=true)
@@ -23,11 +23,11 @@ public class Workshops {
     public Workshops() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

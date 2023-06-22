@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Courses</title>
-    <link rel="stylesheet" th:href="@{/css/styles.css}"/> <!-- Add a CSS file for styling -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script th:src="@{/js/course.js}"></script>
@@ -11,13 +11,13 @@
 
 <header id="navigation">
     <div>
-        <button>Button 1</button>
-        <button>Button 2</button>
-        <button>Button 3</button>
+        <button>Home</button>
+        <button>Courses</button>
+        <button>Facilities</button>
     </div>
     <div class="user-info">
-        <span class="user-name">John Doe</span>
-        <img class="user-icon" src="/images/user-icon.png" alt="User Icon"/>
+        <div class="user-name">John Doe </div>
+        <img class="user-icon" src="static/images/user-icon.png" alt="User Icon"/>
     </div>
 </header>
 <div class="content-wrapper">
@@ -27,7 +27,7 @@
         <div class="select-dropdown">
             <select id="courseDropdown">
                 <option value="">Select a Course</option>
-                <option th:each="course : ${courses}" th:value="${course.id}" th:text="${course.price}"></option>
+                <option th:each="course : ${courses}" th:value="${course.id}" th:text="${course.name}"></option>
             </select>
         </div>
 
@@ -39,7 +39,7 @@
             <div class="select-dropdown">
                 <select id="trainerDropdown">
                     <option value="">Select a Trainer</option>
-                    <option th:each="trainer : ${trainers}" th:value="${trainer.id}" th:text="${trainer.name}"></option>
+                    <option th:each="trainer : ${trainers}" th:value="${trainer.id}" th:text="${trainer.name+' '+trainer.surname}"></option>
                 </select>
             </div>
             <div class="button-container">

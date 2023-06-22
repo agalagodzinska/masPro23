@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-interface SqlAddressRepository extends AddressRepository, JpaRepository<Address, Integer> {
+interface SqlAddressRepository extends AddressRepository, JpaRepository<Address, Long> {
 
 
 }

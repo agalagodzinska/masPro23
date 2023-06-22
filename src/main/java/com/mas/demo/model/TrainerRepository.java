@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @RepositoryRestResource
-public interface TrainerRepository extends JpaRepository<Trainer, Integer> {
+public interface TrainerRepository extends JpaRepository<Trainer, Long> {
 //    List<Course> findCoursesByTrainer(Trainer trainer);
 }

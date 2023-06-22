@@ -7,9 +7,9 @@ import javax.persistence.*;
 @DiscriminatorColumn(name="hasKeys", discriminatorType = DiscriminatorType.STRING)
 @DiscriminatorValue("no")
 public class Cleaner extends Person implements CleanerInterface {
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
-    private int id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.TABLE)
+//    private Long id;
     private int cleanerBadgeNr;
 
     public Cleaner() {
@@ -26,10 +26,15 @@ public class Cleaner extends Person implements CleanerInterface {
         this.cleanerBadgeNr = cleanerWithKeys.getCleanerBadgeNr();
     }
 
+//    @Override
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getCleanerBadgeNr() {
         return cleanerBadgeNr;

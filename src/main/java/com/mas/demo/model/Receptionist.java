@@ -9,9 +9,9 @@ import javax.persistence.*;
 @DiscriminatorColumn(name="isCleaning", discriminatorType = DiscriminatorType.STRING)
 @DiscriminatorValue("no")
 public class Receptionist extends Person{
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
-    private int id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.TABLE)
+//    private Long id;
     private int receptionistBadgeNr;
 
     public Receptionist() {
@@ -22,14 +22,14 @@ public class Receptionist extends Person{
         this.receptionistBadgeNr = receptionistBadgeNr;
     }
 
-    @Override
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+//    @Override
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
     public int getReceptionistBadgeNr() {
         return receptionistBadgeNr;

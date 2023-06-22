@@ -27,17 +27,17 @@ public class CourseController {
         List<Trainer> trainers = trainerRepository.findAll();
         model.addAttribute("courses", courses);
         model.addAttribute("trainers", trainers);
-        return "courses"; // Return the name of the Thymeleaf template (trainers.html)
+        return "courses";
     }
 
     @GetMapping("/courses/{courseId}/trainer")
-    public ResponseEntity<String> getAssignedTrainer(@PathVariable Integer courseId) {
+    public ResponseEntity<String> getAssignedTrainer(@PathVariable Long courseId) {
         Course course = repository.findById(courseId).orElse(null);
         if (course != null) {
             Trainer assignedTrainer = course.getTrainer();
             if (assignedTrainer != null) {
                 // You can format the course details as desired
-                String trainerDetails = "Trainer Name: " + assignedTrainer.getName() + ", Surname: " + assignedTrainer.getSurname();
+                String trainerDetails = "Current trainer: " + assignedTrainer.getName() + " " + assignedTrainer.getSurname();
                 return ResponseEntity.ok(trainerDetails);
             }
         }
@@ -45,7 +45,7 @@ public class CourseController {
     }
 
     @PutMapping("/courses/{courseId}/trainer/{trainerId}")
-    public ResponseEntity<Void> updateAssignedTrainer(@PathVariable Integer courseId, @PathVariable Integer trainerId) {
+    public ResponseEntity<Void> updateAssignedTrainer(@PathVariable Long courseId, @PathVariable Long trainerId) {
         Course course = repository.findById(courseId).orElse(null);
         Trainer trainer = trainerRepository.findById(trainerId).orElse(null);
         if (course != null && trainer != null) {

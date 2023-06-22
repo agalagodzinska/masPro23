@@ -22,9 +22,9 @@ public class RoomController {
 
     @GetMapping("/rooms")
     public String showRooms(Model model) {
-        List<Room> rooms = repository.findAll(); // Retrieve all trainers from the repository
-        model.addAttribute("rooms", rooms); // Add the trainers list to the model
-        return "rooms"; // Return the name of the Thymeleaf template (trainers.html)
+        List<Room> rooms = repository.findAll();
+        model.addAttribute("rooms", rooms);
+        return "rooms";
     }
 }
 
