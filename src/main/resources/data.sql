@@ -1,0 +1,15 @@
+insert into address values (0, 'Warszawa', 'Polska', null, 4, '40-750', 'Wiktorska');
+insert into trainer values ( 'no',0,'Aga','Aga','23456788765', 200);
+insert into trainer values ( 'yes',1,'Ola','Ola','23456788765', 250);
+insert into trainer values ( 'yes',2,'Ania','Ania','23456788765', 250);
+insert into trainer values ( 'yes',3,'Asia','Asia','23456788765', 250);
+insert into facility values (0, '111111111111111111', 'TrainHouse', 0, 1);
+insert into room values (0, 1, 2, 0);
+insert into facility_trainer values ( 0,0 );
+insert into workshops values ( 0, {ts '2012-09-17 18:47:52.69'}, 20, 11, 13, 0);
+insert into trainee values ( 0,'btvcds','cfvgbnhj','23456788765',12 );
+insert into course values ( 0,{ts '2012-09-17 18:47:52.69'}, 20, 4, 5, 6,0);
+insert into course_trainee values (0,0);
+insert into cleaner values ( 'no',0,'drftgyhuj','cfvgbnhj','23456788765',12345,null );
+insert into cleaner values ('yes',1,'crtvbyunj','cfvgbnhj','23456788765', 76543,43);
+insert into receptionist values ('no', 1, '345678','cfvgbnhj','23456788765',4567,456);

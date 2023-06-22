@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Courses</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/> <!-- Add a CSS file for styling -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script th:src="@{/js/course.js}"></script>
+</head>
+<body>
+
+<header id="navigation">
+    <div>
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+    </div>
+    <div class="user-info">
+        <span class="user-name">John Doe</span>
+        <img class="user-icon" src="/images/user-icon.png" alt="User Icon"/>
+    </div>
+</header>
+<div class="content-wrapper">
+
+    <h1>List of Courses</h1>
+    <div class="centered">
+        <div class="select-dropdown">
+            <select id="courseDropdown">
+                <option value="">Select a Course</option>
+                <option th:each="course : ${courses}" th:value="${course.id}" th:text="${course.price}"></option>
+            </select>
+        </div>
+
+        <div id="assignedTrainerSection" style="display: none;">
+            <h2>Assigned Trainer</h2>
+            <div id="assignedTrainer"></div>
+            <h2>Update Assigned Trainer</h2>
+
+            <div class="select-dropdown">
+                <select id="trainerDropdown">
+                    <option value="">Select a Trainer</option>
+                    <option th:each="trainer : ${trainers}" th:value="${trainer.id}" th:text="${trainer.name}"></option>
+                </select>
+            </div>
+            <div class="button-container">
+                <button id="cancel-button">Cancel</button>
+                <button id="updateCourseBtn">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

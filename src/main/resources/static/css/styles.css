@@ -1,0 +1,79 @@
+#navigation {
+    background-color: #f2f2f2;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Adjust as needed */
+}
+
+.centered {
+    text-align: center;
+}
+
+.trainer-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.select-dropdown select {
+    padding: 12px 20px; /* Adjust as needed */
+    font-size: 16px; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Added margin on top */
+}
+
+#cancel-button,
+#updateCourseBtn {
+    padding: 14px 28px; /* Increased padding for bigger buttons */
+    font-size: 18px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#cancel-button {
+    margin-right: 10px; /* Added margin between buttons */
+}
+
+#navigation button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
