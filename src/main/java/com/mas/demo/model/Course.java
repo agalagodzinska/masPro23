@@ -1,7 +1,9 @@
 package com.mas.demo.model;
 
+
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -13,15 +15,15 @@ public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private int id;
-    @NotBlank
+    @NotNull
     private double price;
-    @NotBlank
+    @NotNull
     private int totalSpots;
-    @NotBlank
+    @NotNull
     private int spotsAvailable;
-    @NotBlank
+    @NotNull
     private int totalHourCount;
-    @NotBlank
+    @NotNull
     private LocalDateTime dateTime;
     @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(
@@ -38,14 +40,14 @@ public class Course {
     public Course() {
     }
 
-    public Course( double price, int totalSpots, int spotsAvailable,int totalHourCount, LocalDateTime dateTime, Trainer trainer) {
-       this.price = price;
-        this.totalSpots = totalSpots;
-        this.spotsAvailable = spotsAvailable;
-        this.totalHourCount=totalHourCount;
-        this.dateTime=dateTime;
-        this.trainer = trainer;
-    }
+//    public Course( double price, int totalSpots, int spotsAvailable,int totalHourCount, LocalDateTime dateTime, Trainer trainer) {
+//       this.price = price;
+//        this.totalSpots = totalSpots;
+//        this.spotsAvailable = spotsAvailable;
+//        this.totalHourCount=totalHourCount;
+//        this.dateTime=dateTime;
+//        this.trainer = trainer;
+//    }
 
     public int getId() {
         return id;

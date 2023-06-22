@@ -48,10 +48,15 @@ public class CourseController {
     public ResponseEntity<Void> updateAssignedTrainer(@PathVariable Integer courseId, @PathVariable Integer trainerId) {
         Course course = repository.findById(courseId).orElse(null);
         Trainer trainer = trainerRepository.findById(trainerId).orElse(null);
-
         if (course != null && trainer != null) {
             course.setTrainer(trainer);
+
+// musimy do setu courses w entity Trainer dodac ten course
+
+            trainer.getCourses().add(course);
+            trainerRepository.save(trainer);
             repository.save(course);
+
             return ResponseEntity.ok().build();
         }
 

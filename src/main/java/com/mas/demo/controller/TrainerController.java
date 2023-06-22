@@ -29,6 +29,14 @@ public class TrainerController {
         model.addAttribute("trainers", trainers); // Add the trainers list to the model
         return "trainers"; // Return the name of the Thymeleaf template (trainers.html)
     }
+//    @GetMapping("/trainers/{trainerId}/courses")
+//    public List<Course> getCoursesForTrainer(@PathVariable int trainerId) {
+//        Trainer trainer = repository.findById(trainerId).orElse(null);
+//        if (trainer == null) {
+//            // Handle trainer not found
+//        }
+//        return repository.findCoursesByTrainer(trainer);
+//    }
 
 
 //    @GetMapping

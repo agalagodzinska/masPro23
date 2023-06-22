@@ -1,6 +1,7 @@
 package com.mas.demo.model;
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "address")
